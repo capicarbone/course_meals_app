@@ -7,7 +7,7 @@ enum Complexity {
 }
 
 enum Affordability {
-  Afforsable,
+  Affordable,
   Pricey,
   Luxurious
 }
@@ -22,7 +22,8 @@ class Meal {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final bool isGluttenFree;
+  final bool isVegan;
+  final bool isGlutenFree;
   final bool isLactoseFree;
   final bool isVegetarian;
 
@@ -34,9 +35,10 @@ class Meal {
     @required this.ingredients,
     @required this.steps,
     @required this.duration,
-    this.complexity = Complexity.Simple,
+    @required this.complexity = Complexity.Simple,
     @required this.affordability,
-    @required this.isGluttenFree,
+    @required this.isVegan,
+    @required this.isGlutenFree,
     @required this.isLactoseFree,
     @required this.isVegetarian
 
